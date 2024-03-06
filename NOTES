@@ -1,0 +1,75 @@
+clone https://github.com/openraildata/td-trust-example-python3
+
+sudo apt update
+sudo apt upgrade
+sudo apt install python3.10-venv
+
+apt install python3.10-venv
+
+Make sure you install the dependencies in requirements.txt. You can do this by opening a terminal in your local copy of this repository, and running the following commands. Using a virtual environment is good practice, but you can skip these steps if you wish.
+
+python3 -m venv venv
+source venv/bin/activate
+pip3 install -r requirements.txt
+
+Setup
+Create a file named secrets.json in the same directory as main.py. This file should consist of a JSON array containing your registered email and password. For example, if your email address was "user@example.com" and your password was "hunter2", the contents of the file would be:
+
+["user@example.com", "hunter2"]
+
+python main.py --trust
+
+
+###############  GITHUB
+
+
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ git init
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ git add .
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ git commit -m "fff"
+On branch master
+nothing to commit, working tree clean
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ git remote add origin  https://github.com/RobSimpsonHove/td-trust-example-python3
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$  ssh-keygen -t ed25519 -C "rgsimpson@gmail.com"
+Generating public/private ed25519 key pair.
+Enter file in which to save the key (/home/rgsim/.ssh/id_ed25519): 
+Created directory '/home/rgsim/.ssh'.
+Enter passphrase (empty for no passphrase): 
+Enter same passphrase again: 
+Your identification has been saved in /home/rgsim/.ssh/id_ed25519
+Your public key has been saved in /home/rgsim/.ssh/id_ed25519.pub
+The key fingerprint is:
+SHA256:5uLVxa+WfEKEZJDlI4GQ2zHV27gw1HwcV+p3At+2bVc rgsimpson@gmail.com
+The key's randomart image is:
++--[ED25519 256]--+
+|    .o o+B.......|
+|    . + oo* o. . |
+|     o +.oo*. .  |
+|    . . o.+oo+ . |
+|        So oo + E|
+|       o ..... +=|
+|      . o .o ...+|
+|     . o    =....|
+|      .    ..o   |
++----[SHA256]-----+
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ xclip -sel clip < ~/.ssh/id_ed25519.pub
+(ADD SSH KEY TO GITHUB))
+
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ git remote set-url origin git@github.com:RobSimpsonHove/td-trust-example-python3
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ git push -u origin master
+The authenticity of host 'github.com (140.82.121.4)' can't be established.
+ED25519 key fingerprint is SHA256:+DiY3wvvV6TuJJhbpZisF/zLDA0zPMSvHdkr4UvCOqU.
+This key is not known by any other names
+Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
+Warning: Permanently added 'github.com' (ED25519) to the list of known hosts.
+Enumerating objects: 10, done.
+Counting objects: 100% (10/10), done.
+Delta compression using up to 8 threads
+Compressing objects: 100% (9/9), done.
+Writing objects: 100% (10/10), 4.76 KiB | 2.38 MiB/s, done.
+Total 10 (delta 0), reused 0 (delta 0), pack-reused 0
+To github.com:RobSimpsonHove/td-trust-example-python3
+ * [new branch]      master -> master
+Branch 'master' set up to track remote branch 'master' from 'origin'.
+(venv) rgsim@Rob-XPS13:~/td-trust-example-python3$ 
+
+
